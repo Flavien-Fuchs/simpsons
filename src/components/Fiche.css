@@ -1,0 +1,105 @@
+.fiche-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: center;
+    height: 200px;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 150px 150px 0 0;
+    background-image: none;
+    transition: .2s;
+    border: 3px solid grey;
+    background-color: rgb(232, 232, 59);
+    position: relative;
+}
+
+.fiche-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 150px 150px 0 0;
+
+    display: none;
+    background-size: cover;
+
+}
+
+.fiche-container:hover {
+    background-color: none;
+    scale: 1.1;
+    border: 3px solid rgb(178, 178, 7);
+    transition: .2s;
+    border-radius: 150px;
+    background-color: rgb(232, 232, 59) transparent;
+
+
+
+    & .fiche-background {
+        display: block;
+        background-size: cover;
+        border-radius: 150px;
+
+    }
+
+    &>img {
+        scale: 1.1;
+        border: 3px solid lightgreen;
+        transition: .2s;
+        background-color: white;
+
+    }
+
+    & h3 {
+        font-size: 2em;
+        transition: .2s;
+
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+            1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+}
+
+.fiche-container>img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 100px;
+    transition: .2s;
+    border: 3px solid grey;
+    background-color: white;
+
+}
+
+
+
+.fiche-container h3 {
+    margin-left: 2em;
+    font-size: 1.4em;
+    transition: .2s;
+    margin: .5em;
+    z-index: 100;
+}
+
+.name-donnut {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-donnut button {
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    margin: .5em;
+}
+
+.fiche-container button>img {
+    width: 1.4em;
+    height: 1.4em;
+}
